@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StemGen | Home Version 2</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -60,22 +62,22 @@
             <h2 class="section-title" data-aos="fade-up">Shop by Age</h2>
             <div class="row mt-5">
                 <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center age-circle age-4-6" style="width: 150px; height: 150px;">
                         <h4 class="mb-0 text-primary">Ages 4-6</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center age-circle age-7-9" style="width: 150px; height: 150px;">
                         <h4 class="mb-0 text-success">Ages 7-9</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center age-circle age-10-12" style="width: 150px; height: 150px;">
                         <h4 class="mb-0 text-warning">Ages 10-12</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                    <div class="p-4 bg-white rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center age-circle age-13" style="width: 150px; height: 150px;">
                         <h4 class="mb-0 text-danger">Ages 13+</h4>
                     </div>
                 </div>
@@ -93,7 +95,47 @@
                 <div class="col-md-6 order-md-1 mt-4 mt-md-0" data-aos="fade-right">
                     <h2 class="mb-4">Designed by Scientists. Loved by Kids.</h2>
                     <p class="lead">Every StemGen kit is carefully crafted to ensure maximum educational value while feeling like pure play.</p>
-                    <a href="about.html" class="btn btn-secondary-custom mt-3">Learn About Us</a>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fs-3">🎓</span>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Curriculum Aligned</h6>
+                                    <small class="text-white-50">Reinforces school learning</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fs-3">🛡️</span>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">100% Safe &amp; Tested</h6>
+                                    <small class="text-white-50">Exceeds safety standards</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fs-3">📹</span>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Easy Video Guides</h6>
+                                    <small class="text-white-50">Step-by-step tutorials</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fs-3">📦</span>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Everything Included</h6>
+                                    <small class="text-white-50">All parts inside the box</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-secondary-custom mt-4">Learn About Us</a>
                 </div>
             </div>
         </div>
@@ -103,11 +145,35 @@
     <section class="section-padding">
         <div class="container text-center">
             <h2 class="section-title" data-aos="fade-up">What Parents Say</h2>
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-8" data-aos="zoom-in">
-                    <div class="glass-panel text-dark">
-                        <p class="fs-4 fst-italic">"My daughter used to hate science class. After one month with the Robotics Starter Kit, she's trying to build a robot dog. StemGen is incredible!"</p>
-                        <h5 class="mt-4 text-primary fw-bold">- Sarah J., Mother of a 9-year-old</h5>
+            <div class="row mt-5 g-4">
+                <!-- Review 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel text-dark h-100 p-4 d-flex flex-column justify-content-between text-start">
+                        <div>
+                            <div class="text-warning mb-3">⭐⭐⭐⭐⭐</div>
+                            <p class="fst-italic">"My daughter used to hate science class. After one month with the Robotics Starter Kit, she's trying to build a robot dog. StemGen is incredible!"</p>
+                        </div>
+                        <h6 class="mt-4 text-primary fw-bold mb-0">- Sarah J., Mother of a 9-year-old</h6>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-panel text-dark h-100 p-4 d-flex flex-column justify-content-between text-start">
+                        <div>
+                            <div class="text-warning mb-3">⭐⭐⭐⭐⭐</div>
+                            <p class="fst-italic">"The Chemistry Set was the hit of the holiday season! Safe, easy to follow, and actually explains the science behind the colors instead of just doing neat tricks."</p>
+                        </div>
+                        <h6 class="mt-4 text-primary fw-bold mb-0">- David L., Father of an 11-year-old</h6>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-panel text-dark h-100 p-4 d-flex flex-column justify-content-between text-start">
+                        <div>
+                            <div class="text-warning mb-3">⭐⭐⭐⭐⭐</div>
+                            <p class="fst-italic">"As an elementary teacher, I'm picky about STEM toys. StemGen kits hit the perfect balance of educational value and engaging, self-directed play."</p>
+                        </div>
+                        <h6 class="mt-4 text-primary fw-bold mb-0">- Elena R., 3rd Grade Teacher &amp; Parent</h6>
                     </div>
                 </div>
             </div>
@@ -129,19 +195,23 @@
             <h2 class="section-title" data-aos="fade-up">Upcoming STEM Competitions</h2>
             <div class="row mt-5">
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-panel text-start">
-                        <h4 class="fw-bold text-primary">National Junior Robotics League</h4>
-                        <p class="text-muted">August 15-16, 2026 | Virtual Event</p>
-                        <p>Assemble your team and use your StemGen kits to solve real-world logistical problems in this two-day hackathon.</p>
-                        <button class="btn btn-outline-primary btn-sm rounded-pill mt-2">Register Now</button>
+                    <div class="glass-panel text-start h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-primary">National Junior Robotics League</h4>
+                            <p class="text-muted">August 15-16, 2026 | Virtual Event</p>
+                            <p>Assemble your team and use your StemGen kits to solve real-world logistical problems in this two-day hackathon.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm rounded-pill mt-3 align-self-start">Register Now</button>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-panel text-start">
-                        <h4 class="fw-bold text-secondary">The Great Chemistry Bake-off</h4>
-                        <p class="text-muted">September 10, 2026 | Local Chapters</p>
-                        <p>Showcase the edible side of science! Compete to create the most visually stunning and scientifically sound culinary reactions.</p>
-                        <button class="btn btn-outline-secondary btn-sm rounded-pill mt-2">Find a Chapter</button>
+                    <div class="glass-panel text-start h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-secondary">The Great Chemistry Bake-off</h4>
+                            <p class="text-muted">September 10, 2026 | Local Chapters</p>
+                            <p>Showcase the edible side of science! Compete to create the most visually stunning and scientifically sound culinary reactions.</p>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm rounded-pill mt-3 align-self-start">Find a Chapter</button>
                     </div>
                 </div>
             </div>
@@ -217,15 +287,15 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer>
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">🔬 StemGen</h4>
-                    <p>Inspiring the next generation of scientists, engineers, and creators through hands-on play.</p>
+                    <p class="text-white-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play.</p>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="mb-3">Quick Links</h5>
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="text-white mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="shop.html">Shop Kits</a></li>
@@ -233,17 +303,30 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="mb-3">Follow Us</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="text-white mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="text-white-50">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                        <button class="btn btn-primary-custom" type="submit">Subscribe</button>
+                    </form>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="fs-5">Facebook</a>
+                        <a href="#" class="fs-5">Twitter</a>
+                        <a href="#" class="fs-5">Instagram</a>
                     </div>
                 </div>
             </div>
             <hr class="mt-4 mb-4 border-secondary">
-            <div class="text-center">
+            <div class="text-center text-white-50">
                 <p class="mb-0">&copy; 2026 StemGen. All rights reserved.</p>
             </div>
         </div>

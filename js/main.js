@@ -21,3 +21,105 @@ if (menuToggle) {
         });
     });
 }
+
+// Theme & RTL Logic
+document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to Top Button Injection
+    injectScrollToTop();
+
+    const navbarNav = document.querySelector('.navbar-nav');
+    if (!navbarNav) return;
+
+    // Create container for buttons
+    const btnContainer = document.createElement('li');
+    btnContainer.className = 'nav-item ms-lg-3 d-flex align-items-center mt-3 mt-lg-0';
+
+    // Theme Button
+    const themeBtn = document.createElement('button');
+    themeBtn.className = 'btn-theme-toggle';
+    themeBtn.innerHTML = '?? Dark';
+    
+    // RTL Button
+    const rtlBtn = document.createElement('button');
+    rtlBtn.className = 'btn-rtl-toggle';
+    rtlBtn.innerHTML = 'RTL';
+
+    btnContainer.appendChild(themeBtn);
+    btnContainer.appendChild(rtlBtn);
+    navbarNav.appendChild(btnContainer);
+
+    // Apply saved preferences
+    const savedTheme = localStorage.getItem('theme');
+    const savedDir = localStorage.getItem('dir');
+
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        themeBtn.innerHTML = '?? Light';
+    }
+
+    if (savedDir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        rtlBtn.innerHTML = 'LTR';
+        const bsCss = document.getElementById('bootstrap-css');
+        if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
+    }
+
+    // Theme Toggle Event
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        if (currentTheme === 'dark') {
+            document.documentElement.removeAttribute('data-bs-theme');
+            themeBtn.innerHTML = '?? Dark';
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            themeBtn.innerHTML = '?? Light';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // RTL Toggle Event
+    rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        const bsCss = document.getElementById('bootstrap-css');
+        if (currentDir === 'rtl') {
+            document.documentElement.removeAttribute('dir');
+            rtlBtn.innerHTML = 'RTL';
+            localStorage.setItem('dir', 'ltr');
+            if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
+        } else {
+            document.documentElement.setAttribute('dir', 'rtl');
+            rtlBtn.innerHTML = 'LTR';
+            localStorage.setItem('dir', 'rtl');
+            if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
+        }
+    });
+
+});
+
+function injectScrollToTop() {
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scroll-to-top';
+    scrollTopBtn.className = 'btn-scroll-top';
+    scrollTopBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: auto;"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+    scrollTopBtn.setAttribute('title', 'Go to Top');
+    document.body.appendChild(scrollTopBtn);
+
+    // Show/hide button on scroll
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrolled > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top on click
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
