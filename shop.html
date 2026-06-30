@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StemGen | Shop</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home v2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center">
+        <div class="container mt-5" data-aos="zoom-in">
+            <h1 class="hero-title text-white">Our Kits</h1>
+            <p class="lead">Find the perfect experiment for your little scientist.</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3" data-aos="fade-up">
+                <div>
+                    <button class="btn btn-primary-custom me-2">All</button>
+                    <button class="btn btn-outline-dark me-2">Robotics</button>
+                    <button class="btn btn-outline-dark me-2">Chemistry</button>
+                    <button class="btn btn-outline-dark">Electronics</button>
+                </div>
+                <div>
+                    <select class="form-select">
+                        <option>Sort by: Recommended</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4">
+                
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-wrapper" style="height: 200px;">
+                            <img src="images/hero_robotics_1782795210052.png" class="card-img-top" alt="Robotics Starter Kit">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Robotics</span>
+                            <h5 class="card-title fw-bold">Robotics Starter Kit</h5>
+                            <p class="text-muted small">Ages 8+ • 5 Projects</p>
+                            <h4 class="fw-bold mb-3">$49.99</h4>
+                            <button class="btn btn-outline-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-wrapper" style="height: 200px;">
+                            <img src="images/hero_chemistry_1782795226319.png" class="card-img-top" alt="Magic Chemistry Set">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Chemistry</span>
+                            <h5 class="card-title fw-bold">Magic Chemistry Set</h5>
+                            <p class="text-muted small">Ages 6+ • 12 Experiments</p>
+                            <h4 class="fw-bold mb-3">$35.00</h4>
+                            <button class="btn btn-outline-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-wrapper" style="height: 200px;">
+                            <img src="images/hero_electronics_1782795242887.png" class="card-img-top" alt="Circuit Explorer">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2">Electronics</span>
+                            <h5 class="card-title fw-bold">Circuit Explorer</h5>
+                            <p class="text-muted small">Ages 10+ • 20 Components</p>
+                            <h4 class="fw-bold mb-3">$55.99</h4>
+                            <button class="btn btn-outline-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-wrapper" style="height: 200px;">
+                            <img src="images/hero_kids_playing_1782795290598.png" class="card-img-top" alt="Team Building Kit">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-dark mb-2">Mixed</span>
+                            <h5 class="card-title fw-bold">Team Building Kit</h5>
+                            <p class="text-muted small">Ages 7+ • Group Play</p>
+                            <h4 class="fw-bold mb-3">$89.99</h4>
+                            <button class="btn btn-outline-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Deal of the Day -->
+    <section class="section-padding" style="background: var(--bg-gradient);">
+        <div class="container">
+            <div class="row align-items-center bg-white rounded-4 shadow p-0 overflow-hidden" data-aos="fade-up">
+                <div class="col-md-6 p-0">
+                    <img src="images/hero_robotics_1782795210052.png" alt="Deal" class="img-fluid w-100" style="object-fit: cover; height: 100%;">
+                </div>
+                <div class="col-md-6 p-5">
+                    <span class="badge bg-danger mb-2">Deal of the Day</span>
+                    <h2 class="fw-bold mb-3">Advanced Robotics Master Kit</h2>
+                    <p class="text-muted">Includes 5 motors, 2 sensors, and a programmable brain. Perfect for ages 12+.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <h3 class="fw-bold text-danger mb-0 me-3">$149.99</h3>
+                        <h5 class="text-muted text-decoration-line-through mb-0">$199.99</h5>
+                    </div>
+                    <button class="btn btn-primary-custom btn-lg w-100">Claim Deal Before It Ends</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Gift Cards -->
+    <section class="section-padding bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="section-title text-white" data-aos="fade-up">Give the Gift of STEM</h2>
+            <p class="lead mb-5" data-aos="fade-up">Not sure which kit to choose? Let them decide with a StemGen digital gift card.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <button class="btn btn-outline-light btn-lg w-100 py-4 fs-3 fw-bold rounded-4">$25</button>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <button class="btn btn-outline-light btn-lg w-100 py-4 fs-3 fw-bold rounded-4">$50</button>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <button class="btn btn-outline-light btn-lg w-100 py-4 fs-3 fw-bold rounded-4">$100</button>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <button class="btn btn-primary-custom btn-lg w-100 py-4 fs-4 fw-bold rounded-4">Custom</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Top Rated by Parents -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title" data-aos="fade-up">Top Rated by Parents</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex bg-light p-4 rounded-4 text-start shadow-sm align-items-center">
+                        <img src="images/hero_chemistry_1782795226319.png" alt="Chemistry" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
+                        <div>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <h5 class="fw-bold">My First Chemistry Set</h5>
+                            <p class="small text-muted mb-0">"The instructions are so clear, my 7-year-old could do it mostly by himself!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="d-flex bg-light p-4 rounded-4 text-start shadow-sm align-items-center">
+                        <img src="images/hero_electronics_1782795242887.png" alt="Electronics" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
+                        <div>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <h5 class="fw-bold">Intro to Circuits</h5>
+                            <p class="small text-muted mb-0">"Brilliant. Safely teaches real electronics principles without any soldering."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Shop by Skill -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title" data-aos="fade-up">Shop by Skill</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="bg-primary text-white p-5 text-center">
+                            <h1 class="display-3">💻</h1>
+                            <h3 class="mt-3 fw-bold">Coding</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>From block-based basics to Python and C++ applied in hardware.</p>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-2">View Kits</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="bg-secondary text-white p-5 text-center">
+                            <h1 class="display-3">⚙️</h1>
+                            <h3 class="mt-3 fw-bold">Engineering</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Understand mechanics, gears, and structural integrity.</p>
+                            <a href="#" class="btn btn-outline-secondary w-100 mt-2">View Kits</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="bg-info text-dark p-5 text-center">
+                            <h1 class="display-3">🧪</h1>
+                            <h3 class="mt-3 fw-bold">Chemistry</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Reactions, states of matter, and molecular structures.</p>
+                            <a href="#" class="btn btn-outline-info w-100 mt-2">View Kits</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3">🔬 StemGen</h4>
+                    <p>Inspiring the next generation of scientists, engineers, and creators through hands-on play.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop Kits</a></li>
+                        <li><a href="services.html">School Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 StemGen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
