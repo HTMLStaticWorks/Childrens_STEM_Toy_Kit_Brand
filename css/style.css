@@ -32,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1050 !important;
 }
 
-.navbar-brand {
+.navbar-brand,
+footer h4.text-primary.mb-3 {
   font-family: var(--font-heading);
   font-weight: 800;
   color: var(--primary-color) !important;
