@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Theme Button
     const themeBtn = document.createElement('button');
     themeBtn.className = 'btn-theme-toggle';
-    themeBtn.innerHTML = '?? Dark';
+    themeBtn.innerHTML = 'Dark';
     
     // RTL Button
     const rtlBtn = document.createElement('button');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-bs-theme', 'dark');
-        themeBtn.innerHTML = '?? Light';
+        themeBtn.innerHTML = 'Light';
     }
 
     if (savedDir === 'rtl') {
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentTheme = document.documentElement.getAttribute('data-bs-theme');
         if (currentTheme === 'dark') {
             document.documentElement.removeAttribute('data-bs-theme');
-            themeBtn.innerHTML = '?? Dark';
+            themeBtn.innerHTML = 'Dark';
             localStorage.setItem('theme', 'light');
         } else {
             document.documentElement.setAttribute('data-bs-theme', 'dark');
-            themeBtn.innerHTML = '?? Light';
+            themeBtn.innerHTML = 'Light';
             localStorage.setItem('theme', 'dark');
         }
     });
@@ -105,6 +105,7 @@ function injectScrollToTop() {
     scrollTopBtn.setAttribute('title', 'Go to Top');
     document.body.appendChild(scrollTopBtn);
 
+
     // Show/hide button on scroll
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -113,7 +114,18 @@ function injectScrollToTop() {
         } else {
             scrollTopBtn.classList.remove('show');
         }
+        
+        // Navbar scrolled state
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            if (scrolled > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
     });
+
 
     // Scroll to top on click
     scrollTopBtn.addEventListener('click', () => {
