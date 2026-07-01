@@ -1018,3 +1018,8 @@ footer a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* --- Override Bootstrap Primary Text Color --- */
+.text-primary {
+    color: var(--primary-color) !important;
+}
