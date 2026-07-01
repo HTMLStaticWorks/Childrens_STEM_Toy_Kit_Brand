@@ -27,41 +27,46 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll to Top Button Injection
     injectScrollToTop();
 
-    const navbarNav = document.querySelector('.navbar-nav');
-    if (!navbarNav) return;
-
-    // Create container for buttons
-    const btnContainer = document.createElement('li');
-    btnContainer.className = 'nav-item ms-lg-3 d-flex align-items-center mt-3 mt-lg-0';
-
-    // Theme Button
-    const themeBtn = document.createElement('button');
-    themeBtn.className = 'btn-theme-toggle';
-    themeBtn.innerHTML = 'Dark';
-    
-    // RTL Button
-    const rtlBtn = document.createElement('button');
-    rtlBtn.className = 'btn-rtl-toggle';
-    rtlBtn.innerHTML = 'RTL';
-
-    btnContainer.appendChild(themeBtn);
-    btnContainer.appendChild(rtlBtn);
-    navbarNav.appendChild(btnContainer);
-
-    // Apply saved preferences
+    // Apply saved preferences early so pages without buttons still get the theme
     const savedTheme = localStorage.getItem('theme');
     const savedDir = localStorage.getItem('dir');
 
     if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-bs-theme', 'dark');
-        themeBtn.innerHTML = 'Light';
     }
 
     if (savedDir === 'rtl') {
         document.documentElement.setAttribute('dir', 'rtl');
-        rtlBtn.innerHTML = 'LTR';
         const bsCss = document.getElementById('bootstrap-css');
         if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
+    }
+
+    // Theme Button
+    const themeBtn = document.createElement('button');
+    themeBtn.className = 'btn-theme-toggle';
+    themeBtn.innerHTML = savedTheme === 'dark' ? 'Light' : 'Dark';
+    
+    // RTL Button
+    const rtlBtn = document.createElement('button');
+    rtlBtn.className = 'btn-rtl-toggle';
+    rtlBtn.innerHTML = savedDir === 'rtl' ? 'LTR' : 'RTL';
+
+    const navbarNav = document.querySelector('.navbar-nav');
+    if (navbarNav) {
+        // Create container for buttons in navbar
+        const btnContainer = document.createElement('li');
+        btnContainer.className = 'nav-item ms-lg-3 d-flex align-items-center mt-3 mt-lg-0';
+        btnContainer.appendChild(themeBtn);
+        btnContainer.appendChild(rtlBtn);
+        navbarNav.appendChild(btnContainer);
+    } else {
+        // Create floating container for pages without navbar
+        const floatingContainer = document.createElement('div');
+        floatingContainer.className = 'position-absolute top-0 end-0 p-3 p-md-4 d-flex align-items-center';
+        floatingContainer.style.zIndex = '1050';
+        floatingContainer.appendChild(themeBtn);
+        floatingContainer.appendChild(rtlBtn);
+        document.body.appendChild(floatingContainer);
     }
 
     // Theme Toggle Event
