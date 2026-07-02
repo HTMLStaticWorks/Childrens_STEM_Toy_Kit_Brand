@@ -40,6 +40,10 @@ footer h4.text-primary.mb-3 {
   font-size: 1.8rem;
 }
 
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
 .nav-link {
   font-weight: 600;
   color: var(--text-dark) !important;
@@ -416,15 +420,11 @@ footer a:hover {
   /* Footer adjustments */
   footer {
     padding: 40px 0 15px 0;
-    text-align: center;
+    text-align: left;
   }
 
   footer .d-flex.gap-3 {
-    justify-content: center;
-  }
-
-  footer .col-md-4 {
-    text-align: center;
+    justify-content: flex-start;
   }
 
   /* Fix carousel controls from going off-screen */
@@ -1025,6 +1025,73 @@ footer .social-icons a:hover {
 /* --- Scrolled Navbar State --- */
 .navbar.navbar-scrolled {
     background: rgba(255, 255, 255, 0.98) !important;
+
+/* Premium Product Card Styles */
+.product-card {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    overflow: hidden !important;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15) !important;
+    border-color: rgba(106, 27, 154, 0.3) !important;
+}
+
+.product-card .card-img-wrapper {
+    border-radius: 16px 16px 0 0 !important;
+    overflow: hidden !important;
+}
+
+.product-card img {
+    transition: transform 0.5s ease !important;
+}
+
+.product-card:hover img {
+    transform: scale(1.08) !important;
+}
+
+/* Dark Mode Overrides for Product Card */
+[data-bs-theme="dark"] .product-card {
+    background: rgba(30, 30, 40, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-bs-theme="dark"] .product-card .card-title,
+[data-bs-theme="dark"] .product-card h4 {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .product-card .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-bs-theme="dark"] .product-card:hover {
+    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.4) !important;
+    border-color: rgba(106, 27, 154, 0.6) !important;
+}
+
+/* Dark Mode Navbar Links Fix */
+[data-bs-theme="dark"] .navbar .nav-link,
+[data-bs-theme="dark"] .navbar .navbar-brand {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+[data-bs-theme="dark"] .navbar .nav-link:hover,
+[data-bs-theme="dark"] .navbar .nav-link:focus,
+[data-bs-theme="dark"] .navbar .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* --- Scrolled Navbar State --- */
+.navbar.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
@@ -1040,3 +1107,4 @@ footer .social-icons a:hover {
 .text-primary {
     color: var(--primary-color) !important;
 }
+
