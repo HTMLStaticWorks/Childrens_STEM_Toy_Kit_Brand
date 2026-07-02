@@ -7,10 +7,10 @@ for file in files:
     with open(file, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Update grid for Newsletter column on mobile
+    # Update grid for Newsletter column to remove unnecessary top margins
     content = content.replace(
         '<div class="col-lg-3 col-md-6 col-12 mt-md-4 mt-lg-0 mt-4">',
-        '<div class="col-lg-3 col-md-6 col-6 mt-md-4 mt-lg-0 mt-4">'
+        '<div class="col-lg-3 col-md-6 col-12">'
     )
     
     # Left align copyright and prepare for back to top button matching layout
