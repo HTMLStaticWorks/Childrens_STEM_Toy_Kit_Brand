@@ -1,7 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="45" fill="#6a1b9a"/>
-  <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#ffffff" stroke-width="5" transform="rotate(30 50 50)"/>
-  <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#ffffff" stroke-width="5" transform="rotate(90 50 50)"/>
-  <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#ffffff" stroke-width="5" transform="rotate(150 50 50)"/>
-  <circle cx="50" cy="50" r="10" fill="#ff9800"/>
+  <defs>
+    <linearGradient id="favBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7b2cbf" />
+      <stop offset="100%" stop-color="#3a0ca3" />
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#ff7b00" />
+    </linearGradient>
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer rounded square background for modern contrast -->
+  <rect width="100" height="100" rx="22" fill="url(#favBgGrad)"/>
+
+  <!-- Atom Orbits -->
+  <ellipse cx="50" cy="54" rx="36" ry="10" fill="none" stroke="url(#orbitGrad)" stroke-width="3.5" transform="rotate(-28 50 54)" stroke-linecap="round" opacity="0.9"/>
+  <ellipse cx="50" cy="54" rx="36" ry="10" fill="none" stroke="url(#orbitGrad)" stroke-width="3.5" transform="rotate(28 50 54)" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Inner Liquid -->
+  <clipPath id="favInner">
+    <path d="M 45.5 20 h 9 v 16 L 73.5 70.5 a 4 4 0 0 1 -4 4 H 30.5 a 4 4 0 0 1 -4 -4 L 45.5 36 Z" />
+  </clipPath>
+  <g clip-path="url(#favInner)">
+    <path d="M 15 54 Q 32.5 49, 50 54 T 85 54 V 82 H 15 Z" fill="url(#liquidGrad)"/>
+    <circle cx="44" cy="62" r="2.5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="54" cy="68" r="3.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- Beaker Glass Outline (White for contrast) -->
+  <path d="M 44 18 h 12 v 18 L 76 72 a 6 6 0 0 1 -6 6 H 30 a 6 6 0 0 1 -6 -6 L 44 36 Z" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="5.5" 
+        stroke-linejoin="round" 
+        stroke-linecap="round"/>
+
+  <!-- Beaker Lip Top -->
+  <rect x="41" y="14" width="18" height="4" rx="2" fill="#ffffff"/>
+
+  <!-- Electrons / Floating Particles -->
+  <circle cx="16" cy="40" r="3.5" fill="#00f2fe"/>
+  <circle cx="84" cy="68" r="3.5" fill="#ff007f"/>
 </svg>

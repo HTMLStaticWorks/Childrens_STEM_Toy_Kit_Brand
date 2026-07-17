@@ -17,7 +17,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
 }
@@ -26,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   max-width: 100vw;
   overflow-x: hidden;
   z-index: 1050 !important;
@@ -38,6 +43,20 @@ footer h4.text-primary.mb-3 {
   font-weight: 800;
   color: var(--primary-color) !important;
   font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  height: 38px;
+  width: auto;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-brand:hover .brand-icon,
+footer h4.text-primary.mb-3:hover .brand-icon {
+  transform: scale(1.15) rotate(15deg);
 }
 
 .text-primary {
@@ -130,7 +149,7 @@ footer h4.text-primary.mb-3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .hero-content {
@@ -154,19 +173,21 @@ footer h4.text-primary.mb-3 {
 }
 
 /* Cards */
-.feature-card, .product-card {
+.feature-card,
+.product-card {
   background: white;
   border-radius: 20px;
   border: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
   overflow: hidden;
   height: 100%;
 }
 
-.feature-card:hover, .product-card:hover {
+.feature-card:hover,
+.product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-wrapper {
@@ -216,6 +237,12 @@ footer {
   background: var(--text-dark);
   color: white;
   padding: 60px 0 20px 0;
+  margin-top: 0 !important;
+}
+
+/* Demo Section styling */
+.demo-section {
+  background: var(--text-dark);
 }
 
 footer h5 {
@@ -236,10 +263,10 @@ footer a:hover {
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Mid-size screens (992px - 1199px) --- */
@@ -249,9 +276,11 @@ footer a:hover {
     font-size: 0.85rem !important;
     padding: 6px 8px !important;
   }
+
   .navbar-brand {
     font-size: 1.4rem !important;
   }
+
   .navbar-nav .btn-primary-custom {
     padding: 6px 12px !important;
     font-size: 0.85rem !important;
@@ -260,6 +289,7 @@ footer a:hover {
 
 /* --- Tablet & Below (≤991px) --- */
 @media (max-width: 991px) {
+
   /* Hamburger toggler button — keep within viewport */
   .navbar-toggler {
     border: 2px solid var(--primary-color) !important;
@@ -291,7 +321,7 @@ footer a:hover {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     max-width: 100%;
     overflow-x: hidden;
@@ -299,7 +329,7 @@ footer a:hover {
 
   [data-bs-theme="dark"] .navbar-collapse {
     background: #1a1a1a;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -375,7 +405,7 @@ footer a:hover {
   }
 
   /* Fix newsletter form stacking */
-  .hero-section ~ section form .d-flex {
+  .hero-section~section form .d-flex {
     flex-direction: column;
   }
 
@@ -540,11 +570,11 @@ footer a:hover {
     align-items: stretch !important;
   }
 
-  .d-flex.justify-content-between.flex-wrap > div {
+  .d-flex.justify-content-between.flex-wrap>div {
     margin-bottom: 10px;
   }
 
-  .d-flex.justify-content-between.flex-wrap > div .btn {
+  .d-flex.justify-content-between.flex-wrap>div .btn {
     margin-bottom: 5px;
   }
 
@@ -583,7 +613,13 @@ footer a:hover {
   }
 
   /* Prevent long words from breaking layout */
-  h1, h2, h3, h4, h5, h6, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
@@ -601,11 +637,15 @@ footer a:hover {
   background: rgba(30, 30, 30, 0.95);
 }
 
+[data-bs-theme="dark"] .demo-section {
+  background: #111111 !important;
+}
+
 [data-bs-theme="dark"] .feature-card,
 [data-bs-theme="dark"] .pricing-card {
   background: rgba(40, 40, 40, 0.85);
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-bs-theme="dark"] .glass-panel {
@@ -617,7 +657,7 @@ footer a:hover {
   background: rgba(0, 0, 0, 0.75) !important;
 }
 
-[data-bs-theme="dark"] .nav-link, 
+[data-bs-theme="dark"] .nav-link,
 [data-bs-theme="dark"] .navbar-brand {
   color: #ffffff !important;
 }
@@ -643,13 +683,13 @@ footer a:hover {
 }
 
 [data-bs-theme="dark"] .form-control {
-  background: rgba(40,40,40,1);
+  background: rgba(40, 40, 40, 1);
   color: white;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 [data-bs-theme="dark"] .form-control:focus {
-  background: rgba(50,50,50,1);
+  background: rgba(50, 50, 50, 1);
   color: white;
 }
 
@@ -683,7 +723,8 @@ footer a:hover {
 }
 
 /* Theme & RTL Buttons Style */
-.btn-theme-toggle, .btn-rtl-toggle {
+.btn-theme-toggle,
+.btn-rtl-toggle {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -694,7 +735,8 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 
-.btn-theme-toggle:hover, .btn-rtl-toggle:hover {
+.btn-theme-toggle:hover,
+.btn-rtl-toggle:hover {
   background: var(--primary-color);
   color: white;
 }
@@ -706,210 +748,219 @@ footer a:hover {
 
 /* Footer specific styles */
 footer .form-control {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 footer .form-control:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--secondary-color);
-    box-shadow: none;
-    color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--secondary-color);
+  box-shadow: none;
+  color: white;
 }
 
 footer .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 footer a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 footer .social-icons a {
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    transform: translateY(-3px);
-    color: var(--secondary-color) !important;
+  transform: translateY(-3px);
+  color: var(--secondary-color) !important;
 }
 
 /* Dark Mode Visibility Fixes */
 [data-bs-theme="dark"] .glass-panel.text-dark,
 [data-bs-theme="dark"] .glass-panel .text-dark {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .bg-white {
-    background-color: rgba(40,40,40,1) !important;
-    color: #ffffff !important;
+  background-color: rgba(40, 40, 40, 1) !important;
+  color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .bg-white.text-dark,
 [data-bs-theme="dark"] .bg-white .text-dark {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] [style*="--text-dark"] {
-    background: #000000 !important;
+  background: #000000 !important;
 }
 
 [data-bs-theme="dark"] .bg-light {
-    background-color: #000000 !important;
+  background-color: #000000 !important;
 }
 
 /* Partner schools hover styles */
 .partner-school {
-    opacity: 0.75;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .partner-school h3 {
-    color: var(--text-dark);
-    transition: color 0.3s ease;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
 }
 
 .partner-school:hover {
-    opacity: 1;
-    transform: scale(1.05);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .partner-school:nth-child(1):hover h3 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .partner-school:nth-child(2):hover h3 {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .partner-school:nth-child(3):hover h3 {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .partner-school:nth-child(4):hover h3 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Download App Section styling to separate from footer */
 .download-app-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #3a0d5c 100%) !important;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #3a0d5c 100%) !important;
 }
 
 [data-bs-theme="dark"] .download-app-section {
-    background: #000000 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Shop by Age Group circles hover styles */
 .age-circle {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
 }
 
 .age-circle:hover {
-    transform: scale(1.15);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
 .age-circle h4 {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .age-circle.age-4-6:hover {
-    background-color: var(--bs-primary) !important;
+  background-color: var(--bs-primary) !important;
 }
+
 .age-circle.age-4-6:hover h4 {
-    color: white !important;
+  color: white !important;
 }
 
 .age-circle.age-7-9:hover {
-    background-color: var(--bs-success) !important;
+  background-color: var(--bs-success) !important;
 }
+
 .age-circle.age-7-9:hover h4 {
-    color: white !important;
+  color: white !important;
 }
 
 .age-circle.age-10-12:hover {
-    background-color: var(--bs-warning) !important;
+  background-color: var(--bs-warning) !important;
 }
+
 .age-circle.age-10-12:hover h4 {
-    color: white !important;
+  color: white !important;
 }
 
 .age-circle.age-13:hover {
-    background-color: var(--bs-danger) !important;
+  background-color: var(--bs-danger) !important;
 }
+
 .age-circle.age-13:hover h4 {
-    color: white !important;
+  color: white !important;
 }
 
 
 /* Contact Social Icons */
 .social-icon-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    border: 1px solid rgba(0,0,0,0.15);
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 [data-bs-theme="dark"] .social-icon-btn {
-    border-color: rgba(255,255,255,0.15);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .social-icon-btn:hover {
-    background-color: var(--primary-color);
-    color: white !important;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(106, 27, 154, 0.3);
-    border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(106, 27, 154, 0.3);
+  border-color: var(--primary-color);
 }
 
 /* Social Login Buttons */
 .btn-social-login {
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-color: rgba(0,0,0,0.15) !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
+
 [data-bs-theme="dark"] .btn-social-login {
-    border-color: rgba(255,255,255,0.15) !important;
-    color: white !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
 }
+
 .btn-social-login:hover {
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    border-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
 }
+
 .btn-social-login:hover i {
-    color: white !important;
+  color: white !important;
 }
 
 /* Password Input Group Eye Buttons */
 .input-group .btn {
-    border-color: #dee2e6 !important;
+  border-color: #dee2e6 !important;
 }
+
 [data-bs-theme="dark"] .input-group .btn {
-    border-color: #333 !important;
-    color: #aaa !important;
+  border-color: #333 !important;
+  color: #aaa !important;
 }
+
 [data-bs-theme="dark"] .input-group .btn:hover {
-    color: white !important;
+  color: white !important;
 }
 
 /* Scroll to Top Button */
@@ -961,150 +1012,96 @@ footer .social-icons a:hover {
 
 /* Premium Product Card Styles */
 .product-card {
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  overflow: hidden !important;
 }
 
 .product-card:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15) !important;
-    border-color: rgba(106, 27, 154, 0.3) !important;
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15) !important;
+  border-color: rgba(106, 27, 154, 0.3) !important;
 }
 
 .product-card .card-img-wrapper {
-    border-radius: 16px 16px 0 0 !important;
-    overflow: hidden !important;
+  border-radius: 16px 16px 0 0 !important;
+  overflow: hidden !important;
 }
 
 .product-card img {
-    transition: transform 0.5s ease !important;
+  transition: transform 0.5s ease !important;
 }
 
 .product-card:hover img {
-    transform: scale(1.08) !important;
+  transform: scale(1.08) !important;
 }
 
 /* Dark Mode Overrides for Product Card */
 [data-bs-theme="dark"] .product-card {
-    background: rgba(30, 30, 40, 0.6) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  background: rgba(30, 30, 40, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
 }
 
 [data-bs-theme="dark"] .product-card .card-title,
 [data-bs-theme="dark"] .product-card h4 {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .product-card .text-muted {
-    color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 [data-bs-theme="dark"] .product-card:hover {
-    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.4) !important;
-    border-color: rgba(106, 27, 154, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(106, 27, 154, 0.4) !important;
+  border-color: rgba(106, 27, 154, 0.6) !important;
 }
 
 /* Dark Mode Navbar Links Fix */
 [data-bs-theme="dark"] .navbar .nav-link,
 [data-bs-theme="dark"] .navbar .navbar-brand {
-    color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
+
 [data-bs-theme="dark"] .navbar .nav-link:hover,
 [data-bs-theme="dark"] .navbar .nav-link:focus,
 [data-bs-theme="dark"] .navbar .nav-link.active {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* --- Scrolled Navbar State --- */
 .navbar.navbar-scrolled {
-    background: rgba(255, 255, 255, 0.98) !important;
-
-/* Premium Product Card Styles */
-.product-card {
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    overflow: hidden !important;
-}
-
-.product-card:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15) !important;
-    border-color: rgba(106, 27, 154, 0.3) !important;
-}
-
-.product-card .card-img-wrapper {
-    border-radius: 16px 16px 0 0 !important;
-    overflow: hidden !important;
-}
-
-.product-card img {
-    transition: transform 0.5s ease !important;
-}
-
-.product-card:hover img {
-    transform: scale(1.08) !important;
-}
-
-/* Dark Mode Overrides for Product Card */
-[data-bs-theme="dark"] .product-card {
-    background: rgba(30, 30, 40, 0.6) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-}
-
-[data-bs-theme="dark"] .product-card .card-title,
-[data-bs-theme="dark"] .product-card h4 {
-    color: #ffffff !important;
-}
-
-[data-bs-theme="dark"] .product-card .text-muted {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-[data-bs-theme="dark"] .product-card:hover {
-    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.4) !important;
-    border-color: rgba(106, 27, 154, 0.6) !important;
-}
-
-/* Dark Mode Navbar Links Fix */
-[data-bs-theme="dark"] .navbar .nav-link,
-[data-bs-theme="dark"] .navbar .navbar-brand {
-    color: rgba(255, 255, 255, 0.85) !important;
-}
-[data-bs-theme="dark"] .navbar .nav-link:hover,
-[data-bs-theme="dark"] .navbar .nav-link:focus,
-[data-bs-theme="dark"] .navbar .nav-link.active {
-    color: #ffffff !important;
-}
-
-/* --- Scrolled Navbar State --- */
-.navbar.navbar-scrolled {
-    background: rgba(255, 255, 255, 0.98) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
 [data-bs-theme="dark"] .navbar.navbar-scrolled {
-    background: rgba(18, 18, 18, 0.98) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(18, 18, 18, 0.98) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* --- Override Bootstrap Primary Text Color --- */
 .text-primary {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 
+/* Core Values section card title alignment */
+.value-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.value-card h4 {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
