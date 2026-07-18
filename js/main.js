@@ -58,7 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
         btnContainer.className = 'nav-item ms-lg-3 d-flex align-items-center mt-3 mt-lg-0';
         btnContainer.appendChild(themeBtn);
         btnContainer.appendChild(rtlBtn);
-        navbarNav.appendChild(btnContainer);
+        const signUpLink = navbarNav.querySelector('a.btn-primary-custom') || navbarNav.querySelector('a[href="signup.html"]');
+        if (signUpLink && signUpLink.parentElement && signUpLink.parentElement.tagName === 'LI') {
+            navbarNav.insertBefore(btnContainer, signUpLink.parentElement);
+        } else {
+            navbarNav.appendChild(btnContainer);
+        }
     } else {
         // Create floating container for pages without navbar
         const floatingContainer = document.createElement('div');
