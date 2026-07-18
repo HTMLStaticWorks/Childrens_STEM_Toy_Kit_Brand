@@ -1105,3 +1105,476 @@ footer .social-icons a:hover {
   align-items: center;
   justify-content: center;
 }
+
+/* ===================================================
+   SECTION BACKGROUND IMAGE UTILITIES
+   =================================================== */
+.section-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Light overlay — white tint for readability on light sections */
+.section-bg.overlay-light::before {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Very subtle light — bg image is partially visible */
+.section-bg.overlay-soft::before {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+/* Dark overlay — for dark-text-on-image hero-like sections */
+.section-bg.overlay-dark::before {
+  background: rgba(20, 0, 40, 0.75);
+}
+
+/* Brand purple gradient overlay */
+.section-bg.overlay-purple::before {
+  background: linear-gradient(135deg, rgba(106, 27, 154, 0.88) 0%, rgba(58, 13, 92, 0.92) 100%);
+}
+
+/* Brand orange gradient overlay */
+.section-bg.overlay-orange::before {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.82) 0%, rgba(230, 100, 0, 0.88) 100%);
+}
+
+/* Purple-to-cyan gradient (home hero flavour) */
+.section-bg.overlay-gradient::before {
+  background: linear-gradient(135deg, rgba(106, 27, 154, 0.82) 0%, rgba(3, 169, 244, 0.72) 100%);
+}
+
+/* ===================================================
+   PER-PAGE HERO OVERLAY FLAVOURS
+   =================================================== */
+.hero-section.hero-home .hero-overlay {
+  background: linear-gradient(135deg, rgba(106, 27, 154, 0.72) 0%, rgba(3, 169, 244, 0.55) 100%);
+}
+
+.hero-section.hero-about .hero-overlay {
+  background: linear-gradient(135deg, rgba(58, 13, 92, 0.88) 0%, rgba(106, 27, 154, 0.72) 100%);
+}
+
+.hero-section.hero-shop .hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(106, 27, 154, 0.78) 100%);
+}
+
+.hero-section.hero-services .hero-overlay {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.75) 0%, rgba(106, 27, 154, 0.82) 100%);
+}
+
+.hero-section.hero-pricing .hero-overlay {
+  background: linear-gradient(135deg, rgba(106, 27, 154, 0.9) 0%, rgba(3, 169, 244, 0.72) 100%);
+}
+
+.hero-section.hero-contact .hero-overlay {
+  background: linear-gradient(180deg, rgba(106, 27, 154, 0.82) 0%, rgba(58, 13, 92, 0.9) 100%);
+}
+
+/* Inner-page hero (shorter, banner style) */
+.page-hero {
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 80px;
+}
+
+.page-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================================
+   ICON BOX COMPONENT
+   =================================================== */
+.icon-box {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(106, 27, 154, 0.07);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(106, 27, 154, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(106, 27, 154, 0.15);
+  border-color: rgba(106, 27, 154, 0.2);
+}
+
+.icon-box .icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.icon-wrap.icon-primary {
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+  color: var(--primary-color);
+}
+
+.icon-wrap.icon-secondary {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  color: #e65100;
+}
+
+.icon-wrap.icon-accent {
+  background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+  color: #0277bd;
+}
+
+.icon-wrap.icon-success {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #2e7d32;
+}
+
+.icon-box h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.icon-box p {
+  font-size: 0.91rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Dark icon box variant (on dark/coloured backgrounds) */
+.icon-box.icon-box-dark {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.icon-box.icon-box-dark h4 {
+  color: white;
+}
+
+.icon-box.icon-box-dark p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ===================================================
+   PATTERN BACKGROUNDS
+   =================================================== */
+.bg-dots {
+  background-color: #f8f4ff;
+  background-image: radial-gradient(circle, rgba(106, 27, 154, 0.1) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.bg-stripe {
+  background-color: #faf8ff;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(106, 27, 154, 0.04) 0px,
+    rgba(106, 27, 154, 0.04) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+/* ===================================================
+   STATS STRIP
+   =================================================== */
+.stats-strip {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #3a0d5c 100%);
+  padding: 70px 0;
+  position: relative;
+}
+
+.stats-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.stats-strip .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================================
+   NUMBERED STEP CARDS
+   =================================================== */
+.step-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(106, 27, 154, 0.12);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+/* ===================================================
+   PLAY BUTTON (SVG icon based)
+   =================================================== */
+.play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 8px 25px rgba(106, 27, 154, 0.45);
+  cursor: pointer;
+  border: none;
+}
+
+.play-btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.12);
+  box-shadow: 0 12px 35px rgba(255, 152, 0, 0.5);
+}
+
+/* ===================================================
+   PRICING CARDS — BRAND ONLY
+   =================================================== */
+.pricing-card-featured {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #8e24aa 100%) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.pricing-card-featured h3,
+.pricing-card-featured h2,
+.pricing-card-featured li {
+  color: white !important;
+}
+
+.pricing-card-featured .text-muted {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.pricing-card-featured .text-primary {
+  color: #ffcc80 !important;
+}
+
+.pricing-card-featured .badge {
+  background-color: var(--secondary-color) !important;
+  color: #1a1a1a !important;
+}
+
+/* ===================================================
+   TEAM MEMBER CARD
+   =================================================== */
+.team-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  background: white;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(106, 27, 154, 0.15);
+}
+
+.team-card .team-img {
+  height: 280px;
+  overflow: hidden;
+}
+
+.team-card .team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img img {
+  transform: scale(1.06);
+}
+
+.team-card-body {
+  padding: 20px 24px 24px;
+}
+
+/* ===================================================
+   OFFICE / INFO CARDS
+   =================================================== */
+.office-card {
+  border-radius: 20px;
+  padding: 32px 24px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.office-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(106, 27, 154, 0.12);
+}
+
+.office-card .office-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* ===================================================
+   BLOG / ARTICLE CARDS
+   =================================================== */
+.blog-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  background: white;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(106, 27, 154, 0.12);
+}
+
+.blog-card-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-img img {
+  transform: scale(1.06);
+}
+
+/* ===================================================
+   SHOP FILTER BUTTONS — BRAND ONLY
+   =================================================== */
+.filter-btn.active,
+.filter-btn:focus {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* ===================================================
+   BADGE OVERRIDES — BRAND PALETTE ONLY
+   =================================================== */
+.badge-primary-brand {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
+.badge-secondary-brand {
+  background-color: var(--secondary-color) !important;
+  color: #1a1a1a;
+}
+
+.badge-accent-brand {
+  background-color: #0288d1 !important;
+  color: white;
+}
+
+/* ===================================================
+   RESPONSIVE ADDITIONS FOR NEW COMPONENTS
+   =================================================== */
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 42vh;
+    padding: 100px 0 60px;
+  }
+
+  .icon-box {
+    padding: 28px 20px;
+  }
+
+  .step-card {
+    padding: 24px 20px;
+  }
+
+  .stats-strip {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-hero {
+    min-height: 36vh;
+    padding: 90px 0 50px;
+  }
+
+  .icon-box .icon-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-btn {
+    width: 64px;
+    height: 64px;
+  }
+}

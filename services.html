@@ -12,15 +12,20 @@
     <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold text-primary">StemGen</span>
+            </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,29 +45,42 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/hero_kids_playing_1782795290598.png') center/cover;">
-        <div class="container mt-5" data-aos="fade-down">
+    <header class="hero-section hero-services" style="background-image: url('images/school_programs.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" data-aos="fade-down">
             <h1 class="hero-title text-white">Educational Services</h1>
-            <p class="lead w-75 mx-auto">Beyond just kits, we offer comprehensive programs to bring STEM into classrooms, homes, and community centers.</p>
+            <p class="lead text-white" style="max-width:650px;margin:0 auto;text-shadow:0 1px 4px rgba(0,0,0,0.4);">Beyond just kits, we offer comprehensive programs to bring STEM into classrooms, homes, and community centers.</p>
         </div>
-    </section>
+    </header>
 
     <!-- School Programs -->
-    <section class="section-padding">
+    <section class="section-padding bg-stripe">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-2 mb-4" data-aos="fade-left">
                     <img src="images/school_programs.png" alt="School Programs" class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-md-6 order-md-1" data-aos="fade-right">
-                    <h2 class="fw-bold mb-4 text-primary">School &amp; Educator Programs</h2>
+                    <h2 class="fw-bold mb-4" style="color:var(--primary-color);">School &amp; Educator Programs</h2>
                     <p>We partner with schools to provide bulk kits, curriculum alignment, and teacher training. Make science class the highlight of their week.</p>
                     <p class="mt-3">Our school packages are fully customizable, mapped to NGSS (Next Generation Science Standards), and designed to support teachers with detailed lesson plans and worksheets.</p>
                     <ul class="list-unstyled mt-3">
-                        <li class="mb-2">🔹 <strong>NGSS Aligned</strong>: Ready-to-teach curriculum mapping.</li>
-                        <li class="mb-2">🔹 <strong>Discounted Bulk Rates</strong>: Fits school and district budgets.</li>
-                        <li class="mb-2">🔹 <strong>Teacher Training</strong>: Webinars and instructional guides included.</li>
-                        <li class="mb-2">🔹 <strong>LMS Dashboard</strong>: Free digital progress tracking portal.</li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-color)" class="mt-1" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>
+                            <span><strong>NGSS Aligned</strong>: Ready-to-teach curriculum mapping.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-color)" class="mt-1" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>
+                            <span><strong>Discounted Bulk Rates</strong>: Fits school and district budgets.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-color)" class="mt-1" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>
+                            <span><strong>Teacher Training</strong>: Webinars and instructional guides included.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-color)" class="mt-1" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>
+                            <span><strong>LMS Dashboard</strong>: Free digital progress tracking portal.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -92,15 +110,25 @@
     </section>
 
     <!-- Workshops & Events -->
-    <section class="section-padding">
+    <section class="section-padding bg-dots">
         <div class="container text-center">
-            <h2 class="section-title" data-aos="fade-up">Live Workshops & Events</h2>
-            <div class="row mt-4">
-                <div class="col-md-6 offset-md-3" data-aos="zoom-in">
-                    <div class="glass-panel text-start">
-                        <h4 class="text-dark fw-bold">Summer STEM Camps</h4>
-                        <p>Intensive 1-week programs focusing on robotics, coding, and chemistry for kids ages 7-14.</p>
-                        <h4 class="text-dark fw-bold mt-4">Weekend Maker Labs</h4>
+            <h2 class="section-title" data-aos="fade-up">Live Workshops &amp; Events</h2>
+            <div class="row mt-4 g-4 justify-content-center">
+                <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                        </div>
+                        <h4 class="fw-bold">Summer STEM Camps</h4>
+                        <p>Intensive 1-week programs focusing on robotics, coding, and chemistry for kids ages 7–14.</p>
+                    </div>
+                </div>
+                <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16h13a1.5 1.5 0 0 0 1.5-1.5V1.5A1.5 1.5 0 0 0 14.5 0h-13zm7 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L8 10.293V6.5A.5.5 0 0 1 8.5 6z"/></svg>
+                        </div>
+                        <h4 class="fw-bold">Weekend Maker Labs</h4>
                         <p>Drop-in sessions at our partner locations where kids can collaborate and build freely.</p>
                     </div>
                 </div>
@@ -109,10 +137,11 @@
     </section>
 
     <!-- CTA -->
-    <section class="section-padding" style="background: var(--primary-color);">
+    <section class="section-padding section-bg overlay-purple" style="background-image: url('images/educator_classroom.png');">
         <div class="container text-center text-white" data-aos="fade-up">
             <h2 class="text-white mb-4">Want to partner with us?</h2>
-            <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-primary">Get in Touch</a>
+            <p class="lead mb-4 text-white">Join the hundreds of schools and organisations already working with StemGen.</p>
+            <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-bold" style="color:var(--primary-color);">Get in Touch</a>
         </div>
     </section>
 
@@ -141,26 +170,29 @@
     </section>
 
     <!-- Section 7: After-School Programs -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-dots">
         <div class="container text-center">
             <h2 class="section-title" data-aos="fade-up">Turnkey After-School Clubs</h2>
             <p class="lead w-75 mx-auto mb-5" data-aos="fade-up">Want to start a robotics or science club but don't know where to begin? We provide everything you need in a single box.</p>
             <div class="row g-4 mt-2 justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-                        <h4 class="fw-bold text-secondary mb-3">1. The Hardware</h4>
+                    <div class="step-card text-start">
+                        <div class="step-number">1</div>
+                        <h4 class="fw-bold mb-3" style="color:var(--primary-color);">The Hardware</h4>
                         <p class="text-muted">Enough kits and spare parts for up to 30 students to build simultaneously.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-                        <h4 class="fw-bold text-secondary mb-3">2. The Lesson Plans</h4>
+                    <div class="step-card text-start">
+                        <div class="step-number">2</div>
+                        <h4 class="fw-bold mb-3" style="color:var(--primary-color);">The Lesson Plans</h4>
                         <p class="text-muted">A complete 12-week syllabus structured for 90-minute after-school sessions.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-                        <h4 class="fw-bold text-secondary mb-3">3. The Support</h4>
+                    <div class="step-card text-start">
+                        <div class="step-number">3</div>
+                        <h4 class="fw-bold mb-3" style="color:var(--primary-color);">The Support</h4>
                         <p class="text-muted">Direct hotline to our educators to help you troubleshoot any classroom issues.</p>
                     </div>
                 </div>
@@ -198,13 +230,13 @@
                     <div id="caseStudyCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner bg-white p-5 rounded-4 shadow-sm">
                             <div class="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&amp;h=150&amp;fit=crop&amp;crop=face&amp;q=80" alt="Principal Martinez" class="rounded-circle shadow-sm mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                                <img src="images/stemgen_founders.png" alt="Principal Martinez" class="rounded-circle shadow-sm mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                                 <h4 class="fw-bold text-primary mb-3">Oakridge Elementary</h4>
                                 <p class="fs-5 fst-italic">"After implementing StemGen's custom curriculum, our science test scores improved by 34% across the 4th grade."</p>
                                 <p class="text-muted fw-bold mt-3">- Principal Martinez</p>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&amp;h=150&amp;fit=crop&amp;crop=face&amp;q=80" alt="David L." class="rounded-circle shadow-sm mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                                <img src="images/educator_classroom.png" alt="David L." class="rounded-circle shadow-sm mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                                 <h4 class="fw-bold text-primary mb-3">Tech Cares Foundation</h4>
                                 <p class="fs-5 fst-italic">"StemGen made our CSR initiative effortless. They delivered 500 kits to local community centers seamlessly."</p>
                                 <p class="text-muted fw-bold mt-3">- David L., CSR Director</p>
@@ -225,11 +257,14 @@
     </section>
 
         <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 mb-lg-4 mb-3">
-                    <h4 class="text-primary mb-3">🔬 StemGen</h4>
+                    <div class="mb-3 d-flex align-items-center">
+                        <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                        <h4 class="ms-2 text-primary mb-0">StemGen</h4>
+                    </div>
                     <p class="text-white-50 w-lg-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play. Discover the joy of learning with our innovative STEM kits.</p>
                     <div class="d-flex gap-3 social-icons mt-3">
                         <a href="#" class="text-white text-decoration-none" aria-label="Facebook">

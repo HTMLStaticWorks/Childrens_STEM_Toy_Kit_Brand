@@ -11,15 +11,20 @@
     <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold text-primary">StemGen</span>
+            </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,12 +44,13 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero_kids_playing_1782795290598.png') center/cover;">
-        <div class="container mt-5" data-aos="fade-up">
+    <header class="hero-section hero-about" style="background-image: url('images/stemgen_founders.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" data-aos="fade-up">
             <h1 class="hero-title text-white">Our Mission</h1>
-            <p class="lead">To inspire every child to become a creator, innovator, and problem solver.</p>
+            <p class="lead text-white" style="max-width:600px;margin:0 auto;text-shadow:0 1px 4px rgba(0,0,0,0.4);">To inspire every child to become a creator, innovator, and problem solver.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Our Story -->
     <section class="section-padding">
@@ -81,21 +87,36 @@
     </section>
 
     <!-- Philosophy -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-stripe">
         <div class="container text-center">
             <h2 class="section-title" data-aos="fade-up">Our Educational Philosophy</h2>
-            <div class="row mt-5">
+            <div class="row mt-5 g-4">
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    <h4 class="text-primary fw-bold">1. Play is Learning</h4>
-                    <p>When kids are having fun, they retain 80% more information.</p>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M9.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 2.5V3H2.5A1.5 1.5 0 0 0 1 4.5v10A1.5 1.5 0 0 0 2.5 16h11a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/></svg>
+                        </div>
+                        <h4 class="fw-bold" style="color:var(--primary-color);">1. Play is Learning</h4>
+                        <p>When kids are having fun, they retain 80% more information.</p>
+                    </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <h4 class="text-primary fw-bold">2. Failure is Data</h4>
-                    <p>We encourage kids to make mistakes; it's the core of the scientific method.</p>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                        </div>
+                        <h4 class="fw-bold" style="color:var(--primary-color);">2. Failure is Data</h4>
+                        <p>We encourage kids to make mistakes; it's the core of the scientific method.</p>
+                    </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-                    <h4 class="text-primary fw-bold">3. No Boundaries</h4>
-                    <p>Our kits cross the boundaries of science, art, and math (STEAM).</p>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 11.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 .5.5zm0-4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 .5.5zm0-4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 .5.5z"/></svg>
+                        </div>
+                        <h4 class="fw-bold" style="color:var(--primary-color);">3. No Boundaries</h4>
+                        <p>Our kits cross the boundaries of science, art, and math (STEAM).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,29 +128,35 @@
             <h2 class="section-title" data-aos="fade-up">Meet the Team</h2>
             <div class="row mt-4 justify-content-center">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&amp;q=80" alt="Jane Doe" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold">Jane Doe</h4>
-                            <p class="text-muted">Co-Founder &amp; CEO</p>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="images/stemgen_founders.png" alt="Jane Doe — Co-Founder & CEO">
+                        </div>
+                        <div class="team-card-body">
+                            <h4 class="fw-bold mb-1">Jane Doe</h4>
+                            <p class="text-muted mb-0">Co-Founder &amp; CEO</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&amp;q=80" alt="John Smith" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold">John Smith</h4>
-                            <p class="text-muted">Lead Educator</p>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="images/educator_classroom.png" alt="John Smith — Lead Educator">
+                        </div>
+                        <div class="team-card-body">
+                            <h4 class="fw-bold mb-1">John Smith</h4>
+                            <p class="text-muted mb-0">Lead Educator</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&amp;q=80" alt="Emily Davis" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold">Emily Davis</h4>
-                            <p class="text-muted">Lead Product Engineer</p>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="images/school_programs.png" alt="Emily Davis — Lead Product Engineer">
+                        </div>
+                        <div class="team-card-body">
+                            <h4 class="fw-bold mb-1">Emily Davis</h4>
+                            <p class="text-muted mb-0">Lead Product Engineer</p>
                         </div>
                     </div>
                 </div>
@@ -147,35 +174,43 @@
     </section>
 
     <!-- Section 6: Our Core Values -->
-    <section class="section-padding">
+    <section class="section-padding bg-dots">
         <div class="container text-center">
             <h2 class="section-title" data-aos="fade-up">Our Core Values</h2>
             <div class="row mt-5 g-4">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 bg-light rounded-4 h-100 border-0 shadow-sm text-center value-card">
-                        <div class="fs-1 mb-3">🔍</div>
-                        <h4 class="fw-bold text-primary mb-3">Curiosity First</h4>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.242 1.356a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color:var(--primary-color);">Curiosity First</h4>
                         <p class="small text-muted mb-0">We believe asking 'why' is more important than knowing the answer right away.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4 bg-light rounded-4 h-100 border-0 shadow-sm text-center value-card">
-                        <div class="fs-1 mb-3">🤝</div>
-                        <h4 class="fw-bold text-primary mb-3">Inclusive Innovation</h4>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color:var(--primary-color);">Inclusive Innovation</h4>
                         <p class="small text-muted mb-0">STEM is for everyone. We design kits that appeal to all genders, backgrounds, and abilities.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 bg-light rounded-4 h-100 border-0 shadow-sm text-center value-card">
-                        <div class="fs-1 mb-3">🛡️</div>
-                        <h4 class="fw-bold text-primary mb-3">Uncompromising Safety</h4>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/></svg>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color:var(--primary-color);">Uncompromising Safety</h4>
                         <p class="small text-muted mb-0">Parents trust us. We rigorously test every component far beyond industry standards.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="p-4 bg-light rounded-4 h-100 border-0 shadow-sm text-center value-card">
-                        <div class="fs-1 mb-3">✨</div>
-                        <h4 class="fw-bold text-primary mb-3">Joyful Learning</h4>
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-success">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color:var(--primary-color);">Joyful Learning</h4>
                         <p class="small text-muted mb-0">If they aren't having fun, we haven't done our job right.</p>
                     </div>
                 </div>
@@ -184,21 +219,21 @@
     </section>
 
     <!-- Section 7: Our Global Reach -->
-    <section class="section-padding bg-dark text-white">
+    <section class="stats-strip text-white section-bg overlay-dark" style="background-image: url('images/hero_kids_playing_1782795290598.png');">
         <div class="container text-center">
             <h2 class="section-title text-white" data-aos="fade-up">StemGen Around the World</h2>
             <p class="lead mb-5" data-aos="fade-up">What started in a small garage is now inspiring kids globally.</p>
             <div class="row mt-4">
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <h1 class="display-4 fw-bold text-primary">50+</h1>
+                    <h1 class="display-4 fw-bold" style="color:var(--secondary-color);">50+</h1>
                     <p class="fs-5 mt-2">Countries Reached</p>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <h1 class="display-4 fw-bold text-primary">2M+</h1>
+                    <h1 class="display-4 fw-bold" style="color:var(--secondary-color);">2M+</h1>
                     <p class="fs-5 mt-2">Kits Delivered</p>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                    <h1 class="display-4 fw-bold text-primary">10k+</h1>
+                    <h1 class="display-4 fw-bold" style="color:var(--secondary-color);">10k+</h1>
                     <p class="fs-5 mt-2">Partner Schools</p>
                 </div>
             </div>
@@ -252,11 +287,14 @@
     </section>
 
         <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 mb-lg-4 mb-3">
-                    <h4 class="text-primary mb-3">🔬 StemGen</h4>
+                    <div class="mb-3 d-flex align-items-center">
+                        <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                        <h4 class="ms-2 text-primary mb-0">StemGen</h4>
+                    </div>
                     <p class="text-white-50 w-lg-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play. Discover the joy of learning with our innovative STEM kits.</p>
                     <div class="d-flex gap-3 social-icons mt-3">
                         <a href="#" class="text-white text-decoration-none" aria-label="Facebook">

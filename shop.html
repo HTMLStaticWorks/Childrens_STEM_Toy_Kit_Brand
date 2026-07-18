@@ -12,15 +12,20 @@
     <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold text-primary">StemGen</span>
+            </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,15 +45,16 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/hero_robotics_1782795210052.png') center/cover;">
-        <div class="container mt-5" data-aos="zoom-in">
+    <header class="hero-section hero-shop" style="background-image: url('images/shop_robotics.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" data-aos="zoom-in">
             <h1 class="hero-title text-white">Our Kits</h1>
-            <p class="lead text-white">Find the perfect experiment for your little scientist.</p>
+            <p class="lead text-white" style="text-shadow:0 1px 4px rgba(0,0,0,0.4);">Find the perfect experiment for your little scientist.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Shop Content -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-dots">
         <div class="container">
             
             <!-- Filters -->
@@ -107,12 +113,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-card card h-100">
                         <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&amp;q=80" class="card-img-top" alt="Circuit Explorer" style="height: 100%; object-fit: cover;">
+                            <img src="images/hero_electronics_1782795242887.png" class="card-img-top" alt="Circuit Explorer" style="height: 100%; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <span class="badge bg-info text-dark mb-2">Electronics</span>
+                            <span class="badge mb-2" style="background:#0288d1;">Electronics</span>
                             <h5 class="card-title fw-bold">Circuit Explorer</h5>
-                            <p class="text-muted small">Ages 10+ • 20 Components</p>
+                            <p class="text-muted small">Ages 10+ &bull; 20 Components</p>
                             <h4 class="fw-bold mb-3">$55.99</h4>
                             <button class="btn btn-outline-primary w-100">Add to Cart</button>
                         </div>
@@ -139,12 +145,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="product-card card h-100">
                         <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=500&amp;q=80" class="card-img-top" alt="Solar Power Lab" style="height: 100%; object-fit: cover;">
+                            <img src="images/hero_chemistry_1782795226319.png" class="card-img-top" alt="Solar Power Lab" style="height: 100%; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <span class="badge bg-warning text-dark mb-2">Physics</span>
+                            <span class="badge mb-2" style="background:var(--secondary-color);color:#1a1a1a;">Physics</span>
                             <h5 class="card-title fw-bold">Solar Power Lab</h5>
-                            <p class="text-muted small">Ages 9+ • 8 Projects</p>
+                            <p class="text-muted small">Ages 9+ &bull; 8 Projects</p>
                             <h4 class="fw-bold mb-3">$39.99</h4>
                             <button class="btn btn-outline-primary w-100">Add to Cart</button>
                         </div>
@@ -155,12 +161,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="600">
                     <div class="product-card card h-100">
                         <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500&amp;q=80" class="card-img-top" alt="Coding Blocks Kit" style="height: 100%; object-fit: cover;">
+                            <img src="images/hero_kids_playing_1782795290598.png" class="card-img-top" alt="Coding Blocks Kit" style="height: 100%; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <span class="badge bg-danger mb-2">Coding</span>
+                            <span class="badge mb-2" style="background:var(--primary-color);">Coding</span>
                             <h5 class="card-title fw-bold">Coding Blocks Kit</h5>
-                            <p class="text-muted small">Ages 5+ • 15 Challenges</p>
+                            <p class="text-muted small">Ages 5+ &bull; 15 Challenges</p>
                             <h4 class="fw-bold mb-3">$59.99</h4>
                             <button class="btn btn-outline-primary w-100">Add to Cart</button>
                         </div>
@@ -176,7 +182,7 @@
         <div class="container">
             <div class="row align-items-center bg-white rounded-4 shadow p-0 overflow-hidden" data-aos="fade-up">
                 <div class="col-md-6 p-0">
-                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&amp;q=80" alt="Advanced Robotics Master Kit" class="img-fluid w-100" style="object-fit: cover; height: 100%;">
+                    <img src="images/shop_robotics.png" alt="Advanced Robotics Master Kit" class="img-fluid w-100" style="object-fit: cover; height: 100%;">
                 </div>
                 <div class="col-md-6 p-5">
                     <span class="badge bg-danger mb-2">Deal of the Day</span>
@@ -193,7 +199,7 @@
     </section>
 
     <!-- Section 7: Gift Cards -->
-    <section class="section-padding bg-dark text-white">
+    <section class="section-padding section-bg overlay-dark" style="background-image: url('images/hero_kids_playing_1782795290598.png');">
         <div class="container text-center">
             <h2 class="section-title text-white" data-aos="fade-up">Give the Gift of STEM</h2>
             <p class="lead mb-5" data-aos="fade-up">Not sure which kit to choose? Let them decide with a StemGen digital gift card.</p>
@@ -221,9 +227,9 @@
             <div class="row mt-4">
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="d-flex bg-light p-4 rounded-4 text-start shadow-sm align-items-center h-100">
-                        <img src="images/hero_chemistry_1782795226319.png" alt="Chemistry" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
+                        <img src="images/shop_chemistry.png" alt="Chemistry" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
                         <div>
-                            <div class="text-warning mb-2">★★★★★</div>
+                            <div class="text-warning mb-2">&starf;&starf;&starf;&starf;&starf;</div>
                             <h5 class="fw-bold">My First Chemistry Set</h5>
                             <p class="small text-muted mb-0">"The instructions are so clear, my 7-year-old could do it mostly by himself!"</p>
                         </div>
@@ -231,9 +237,9 @@
                 </div>
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="d-flex bg-light p-4 rounded-4 text-start shadow-sm align-items-center h-100">
-                        <img src="images/hero_electronics_1782795242887.png" alt="Electronics" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
+                        <img src="images/shop_team_building.png" alt="Team Building" class="rounded-circle me-4" style="width: 100px; height: 100px; object-fit: cover;">
                         <div>
-                            <div class="text-warning mb-2">★★★★★</div>
+                            <div class="text-warning mb-2">&starf;&starf;&starf;&starf;&starf;</div>
                             <h5 class="fw-bold">Intro to Circuits</h5>
                             <p class="small text-muted mb-0">"Brilliant. Safely teaches real electronics principles without any soldering."</p>
                         </div>
@@ -251,8 +257,10 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
                         <div class="text-white p-5 text-center" style="background: linear-gradient(rgba(106, 27, 154, 0.7), rgba(106, 27, 154, 0.7)), url('images/skill_coding.png') center/cover; min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
-                            <h1 class="display-3">💻</h1>
-                            <h3 class="mt-3 fw-bold">Coding</h3>
+                            <div class="icon-wrap icon-primary mx-auto mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" viewBox="0 0 16 16"><path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/></svg>
+                            </div>
+                            <h3 class="mt-1 fw-bold">Coding</h3>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <p>From block-based basics to Python and C++ applied in hardware.</p>
@@ -263,8 +271,10 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
                         <div class="text-white p-5 text-center" style="background: linear-gradient(rgba(255, 152, 0, 0.7), rgba(255, 152, 0, 0.7)), url('images/skill_engineering.png') center/cover; min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
-                            <h1 class="display-3">⚙️</h1>
-                            <h3 class="mt-3 fw-bold">Engineering</h3>
+                            <div class="icon-wrap icon-secondary mx-auto mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" viewBox="0 0 16 16"><path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z"/></svg>
+                            </div>
+                            <h3 class="mt-1 fw-bold">Engineering</h3>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <p>Understand mechanics, gears, and structural integrity.</p>
@@ -275,8 +285,10 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100">
                         <div class="text-white p-5 text-center" style="background: linear-gradient(rgba(3, 169, 244, 0.7), rgba(3, 169, 244, 0.7)), url('images/skill_chemistry.png') center/cover; min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
-                            <h1 class="display-3">🧪</h1>
-                            <h3 class="mt-3 fw-bold">Chemistry</h3>
+                            <div class="icon-wrap icon-accent mx-auto mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" viewBox="0 0 16 16"><path d="M11 2a1 1 0 0 1 1-1h.5a.5.5 0 0 1 0 1H12v7.5a2.5 2.5 0 0 1-5 0V2h-.5a.5.5 0 0 1 0-1H7a1 1 0 0 1 1-1h3zm-1 7.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/><path d="M5 2.905a.5.5 0 0 0-.757-.429l-2.5 1.5A.5.5 0 0 0 1.5 4.5v7a.5.5 0 0 0 .757.429l2.5-1.5A.5.5 0 0 0 5 9.5V2.905z"/></svg>
+                            </div>
+                            <h3 class="mt-1 fw-bold">Chemistry</h3>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <p>Reactions, states of matter, and molecular structures.</p>
@@ -289,11 +301,14 @@
     </section>
 
         <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 mb-lg-4 mb-3">
-                    <h4 class="text-primary mb-3">🔬 StemGen</h4>
+                    <div class="mb-3 d-flex align-items-center">
+                        <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                        <h4 class="ms-2 text-primary mb-0">StemGen</h4>
+                    </div>
                     <p class="text-white-50 w-lg-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play. Discover the joy of learning with our innovative STEM kits.</p>
                     <div class="d-flex gap-3 social-icons mt-3">
                         <a href="#" class="text-white text-decoration-none" aria-label="Facebook">

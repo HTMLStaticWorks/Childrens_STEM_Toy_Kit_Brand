@@ -12,15 +12,20 @@
     <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold text-primary">StemGen</span>
+            </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,12 +45,13 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/hero_electronics_1782795242887.png') center/cover;">
-        <div class="container mt-5" data-aos="fade-down">
-            <h1 class="hero-title text-white">Simple, Transparent Pricing</h1>
-            <p class="lead text-white">Choose a plan that fits your child's curiosity.</p>
+    <header class="hero-section hero-pricing" style="background-image: url('images/stem_subscription_box.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" data-aos="fade-up">
+            <h1 class="hero-title text-white">Simple, Honest Pricing</h1>
+            <p class="lead text-white" style="max-width:600px;margin:0 auto;text-shadow:0 1px 4px rgba(0,0,0,0.4);">Subscribe once, build every month. No surprise fees, no contracts.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Pricing Tiers -->
     <section class="section-padding">
@@ -73,23 +79,20 @@
                 
                 <!-- Pro Plan -->
                 <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 position-relative" style="transform: scale(1.05); z-index: 1;">
-                        <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning text-dark px-3 py-2">Most Popular</div>
-                        <div class="card-body d-flex flex-column justify-content-between h-100">
-                            <div>
-                                <h3 class="fw-bold mb-3">Explorer</h3>
-                                <h2 class="text-primary fw-bold mb-4">$49<span class="fs-5 text-muted">/mo</span></h2>
-                                <div class="text-center mb-4">
-                                    <ul class="list-unstyled text-start d-inline-block mb-0">
-                                        <li class="mb-2"><span class="text-primary me-2">✓</span> 2 Kits per month</li>
-                                        <li class="mb-2"><span class="text-primary me-2">✓</span> Premium video guides</li>
-                                        <li class="mb-2"><span class="text-primary me-2">✓</span> Live Q&A sessions</li>
-                                        <li class="mb-2"><span class="text-primary me-2">✓</span> Free shipping</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="signup.html" class="btn btn-primary-custom w-100">Choose Explorer</a>
-                        </div>
+                    <div class="pricing-card pricing-card-featured text-center p-4 rounded-4 shadow-lg" style="transform: scale(1.07);">
+                        <span class="badge mb-3" style="background:var(--secondary-color);color:#1a1a1a;">Most Popular</span>
+                        <h3 class="fw-bold text-white">Builder</h3>
+                        <h2 class="display-5 fw-bold text-white">$34.99<span class="fs-6">/mo</span></h2>
+                        <p class="text-white mb-4" style="opacity:0.85;">For the growing experimenter.</p>
+                        <ul class="list-unstyled text-start text-white">
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> 1 Kit per month (2 projects)</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> Intermediate difficulty</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> Companion app with full videos</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> Monthly challenge badge</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> Parent progress report</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffcc80" class="mt-1 flex-shrink-0" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg> Priority customer support</li>
+                        </ul>
+                        <a href="#" class="btn btn-lg w-100 rounded-pill fw-bold mt-3" style="background:var(--secondary-color);color:#1a1a1a;">Start Builder</a>
                     </div>
                 </div>
 
@@ -115,13 +118,45 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- What's in the box -->
-    <section class="section-padding bg-dark text-white">
+        <!-- Section 5: What's in the Box -->
+    <section class="section-padding section-bg overlay-light bg-dots" style="background-image: url('images/stem_subscription_box.png');">
         <div class="container text-center">
-            <h2 class="section-title text-white" data-aos="fade-up">What's in every box?</h2>
-            <div class="row mt-5">
+            <h2 class="section-title" data-aos="fade-up">What's In Your Box?</h2>
+            <p class="lead" data-aos="fade-up">Every kit we ship is carefully assembled with one goal: to delight and educate.</p>
+            <div class="row mt-5 g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M9.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 2.5V3H2.5A1.5 1.5 0 0 0 1 4.5v10A1.5 1.5 0 0 0 2.5 16h11a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/></svg>
+                        </div>
+                        <h4>The Activity Guide</h4>
+                        <p>A colourful, photo-rich illustrated booklet with step-by-step instructions.</p>
+                        <img src="images/educator_classroom.png" alt="Guide" class="img-fluid rounded-3 mt-3" style="height:120px;object-fit:cover;width:100%;">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/></svg>
+                        </div>
+                        <h4>The Components</h4>
+                        <p>Durable, child-safe components labelled and colour-coded for easy identification.</p>
+                        <img src="images/stem_subscription_box.png" alt="Box" class="img-fluid rounded-3 mt-3" style="height:120px;object-fit:cover;width:100%;">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon-wrap icon-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
+                        </div>
+                        <h4>Digital Companion</h4>
+                        <p>QR code access to video tutorials, extra challenges, and an achievement board.</p>
+                        <img src="images/hero_kids_playing_1782795290598.png" alt="App" class="img-fluid rounded-3 mt-3" style="height:120px;object-fit:cover;width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>          <div class="row mt-5">
                 <div class="col-md-4 mb-4" data-aos="fade-right">
                     <img src="images/hero_robotics_1782795210052.png" alt="Materials" class="img-fluid rounded-circle shadow" style="width: 200px; height: 200px; object-fit: cover;">
                     <h4 class="mt-4">Premium Materials</h4>
@@ -292,19 +327,37 @@
         </div>
     </section>
 
-    <!-- Section 8: Warranty / Guarantee -->
-    <section class="section-padding bg-dark text-white text-center">
-        <div class="container" data-aos="zoom-in">
-            <h2 class="mb-4">The "Oops!" Guarantee</h2>
-            <p class="lead w-75 mx-auto">Kids break things. It's part of learning. If a critical component breaks during an experiment, don't worry. We'll replace it for free (limitations apply based on plan).</p>
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-3 col-6">
-                    <h1 class="display-4">🛠️</h1>
-                    <p class="mt-2">Easy Replacements</p>
+    <!-- Section 10: Warranty Section -->
+    <section class="section-padding section-bg overlay-purple" style="background-image: url('images/hero_kids_playing_1782795290598.png');">
+        <div class="container text-center text-white">
+            <h2 class="section-title text-white" data-aos="fade-up">Our Ironclad Guarantee</h2>
+            <div class="row mt-5 g-4 justify-content-center">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box icon-box-dark">
+                        <div class="icon-wrap" style="background:rgba(255,255,255,0.15);color:white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524z"/></svg>
+                        </div>
+                        <h4>12-Month Warranty</h4>
+                        <p>Every product covered against defects in materials and workmanship for a full year.</p>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <h1 class="display-4">📦</h1>
-                    <p class="mt-2">Fast Shipping</p>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box icon-box-dark">
+                        <div class="icon-wrap" style="background:rgba(255,255,255,0.15);color:white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/><path d="M1.5 15a.5.5 0 0 1 0-1h13a.5.5 0 0 1 0 1H1.5z"/></svg>
+                        </div>
+                        <h4>Free Return Shipping</h4>
+                        <p>If something's wrong, we cover return postage. No hassle, no stress.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box icon-box-dark">
+                        <div class="icon-wrap" style="background:rgba(255,255,255,0.15);color:white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                        </div>
+                        <h4>30-Day Satisfaction</h4>
+                        <p>Not wowed? Send it back in 30 days for a full refund. No questions asked.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -325,11 +378,14 @@
     </section>
 
         <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 mb-lg-4 mb-3">
-                    <h4 class="text-primary mb-3">🔬 StemGen</h4>
+                    <div class="mb-3 d-flex align-items-center">
+                        <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                        <h4 class="ms-2 text-primary mb-0">StemGen</h4>
+                    </div>
                     <p class="text-white-50 w-lg-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play. Discover the joy of learning with our innovative STEM kits.</p>
                     <div class="d-flex gap-3 social-icons mt-3">
                         <a href="#" class="text-white text-decoration-none" aria-label="Facebook">

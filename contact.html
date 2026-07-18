@@ -19,7 +19,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 
 <body>
@@ -27,7 +27,10 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🔬 StemGen</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold text-primary">StemGen</span>
+            </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
                 <i class="fas fa-bars text-primary fs-2"></i>
@@ -48,14 +51,13 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="section-padding pt-5 mt-5 bg-dark text-white text-center"
-        style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/hero_chemistry_1782795226319.png') center/cover;">
-        <div class="container mt-5" data-aos="fade-down">
+    <header class="hero-section hero-contact" style="background-image: url('images/hero_chemistry_1782795226319.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center" data-aos="fade-up">
             <h1 class="hero-title text-white">Get in Touch</h1>
-            <p class="lead w-75 mx-auto text-white">Have a question about our kits, subscriptions, or school programs?
-                We're here to help.</p>
+            <p class="lead text-white" style="max-width:560px;margin:0 auto;text-shadow:0 1px 4px rgba(0,0,0,0.4);">We'd love to hear from you — whether it's about a kit, a school partnership, or just a question about science!</p>
         </div>
-    </section>
+    </header>
 
     <!-- Contact Form & Info -->
     <section class="section-padding">
@@ -139,33 +141,39 @@
         </div>
     </section>
 
-    <!-- Section 6: Regional Offices -->
-    <section class="section-padding bg-light">
+    <!-- Regional Offices -->
+    <section class="section-padding bg-dots">
         <div class="container text-center">
             <h2 class="section-title" data-aos="fade-up">Our Regional Offices</h2>
-            <div class="row mt-5 g-4">
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold text-primary">North America HQ</h4>
-                            <p class="text-muted mt-3">123 Innovation Drive<br>Tech City, CA 90210<br>USA</p>
+            <div class="row mt-4 g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="office-card">
+                        <div class="office-icon" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);color:var(--primary-color);margin:0 auto;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
                         </div>
+                        <h4 class="fw-bold mt-2">USA Headquarters</h4>
+                        <p class="text-muted">42 Innovation Blvd, San Francisco, CA 94105</p>
+                        <p class="small"><a href="mailto:usa@stemgen.com" class="text-decoration-none" style="color:var(--primary-color);">usa@stemgen.com</a></p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold text-secondary">Europe Hub</h4>
-                            <p class="text-muted mt-3">45 Science Park<br>London, E1 4AA<br>United Kingdom</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="office-card">
+                        <div class="office-icon" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);color:#e65100;margin:0 auto;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
                         </div>
+                        <h4 class="fw-bold mt-2">UK Office</h4>
+                        <p class="text-muted">14 Maker's Row, London, EC1A 4TZ, United Kingdom</p>
+                        <p class="small"><a href="mailto:uk@stemgen.com" class="text-decoration-none" style="color:var(--secondary-color);">uk@stemgen.com</a></p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold text-info">Asia Pacific Hub</h4>
-                            <p class="text-muted mt-3">88 Future Road<br>Singapore 018956<br>Singapore</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="office-card">
+                        <div class="office-icon" style="background:linear-gradient(135deg,#e1f5fe,#b3e5fc);color:#0277bd;margin:0 auto;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
                         </div>
+                        <h4 class="fw-bold mt-2">Nigeria / Africa</h4>
+                        <p class="text-muted">Plot 22 Victoria Island, Lagos, Nigeria</p>
+                        <p class="small"><a href="mailto:africa@stemgen.com" class="text-decoration-none" style="color:#0277bd;">africa@stemgen.com</a></p>
                     </div>
                 </div>
             </div>
@@ -203,8 +211,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0 order-md-2" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&amp;q=80"
-                        alt="Wholesale &amp; Retailers" class="img-fluid rounded-4 shadow">
+                    <img src="images/school_programs.png" alt="Wholesale Partnership" class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-md-6 order-md-1" data-aos="fade-right">
                     <h2 class="fw-bold mb-4">Wholesale & Retailers</h2>
@@ -221,23 +228,29 @@
         </div>
     </section>
 
-    <!-- Section 9: Live Chat Support -->
-    <section class="section-padding" style="background: var(--primary-color);">
+    <!-- Live Chat CTA -->
+    <section class="section-padding section-bg overlay-purple" style="background-image: url('images/hero_kids_playing_1782795290598.png');">
         <div class="container text-center text-white" data-aos="zoom-in">
-            <h1 class="display-3 mb-3">💬</h1>
-            <h2 class="fw-bold mb-4">Need help right now?</h2>
-            <p class="lead mb-4">Our support team is available via live chat from 9 AM to 6 PM EST.</p>
-            <button class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-primary shadow-sm">Start Live
-                Chat</button>
+            <div class="mb-4">
+                <div style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-flex;align-items:center;justify-content:center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" viewBox="0 0 16 16"><path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.526-2.319C.255 10.482 0 9.283 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/></svg>
+                </div>
+            </div>
+            <h2 class="text-white mb-3">Prefer to chat live?</h2>
+            <p class="lead mb-4">Our support team is online Mon–Fri, 9 am–6 pm (GMT). Average response time: under 3 minutes.</p>
+            <a href="#" class="btn btn-light btn-lg rounded-pill px-5 fw-bold" style="color:var(--primary-color);">Start Live Chat</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 mb-lg-4 mb-3">
-                    <h4 class="text-primary mb-3">🔬 StemGen</h4>
+                    <div class="mb-3 d-flex align-items-center">
+                        <img src="images/stemgen_logo.png" alt="StemGen Logo" height="40" class="d-inline-block align-text-top">
+                        <h4 class="ms-2 text-primary mb-0">StemGen</h4>
+                    </div>
                     <p class="text-white-50 w-lg-50">Inspiring the next generation of scientists, engineers, and creators through hands-on play. Discover the joy of learning with our innovative STEM kits.</p>
                     <div class="d-flex gap-3 social-icons mt-3">
                         <a href="#" class="text-white text-decoration-none" aria-label="Facebook">
