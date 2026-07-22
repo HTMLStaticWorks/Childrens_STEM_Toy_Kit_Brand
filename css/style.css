@@ -995,11 +995,12 @@ footer .form-control:focus {
 [data-bs-theme="dark"] body { background: linear-gradient(135deg, #0e0719 0%, #05020f 100%); color: #f3effa; }
 [data-bs-theme="dark"] .navbar { background: transparent !important; border-bottom: none; }
 [data-bs-theme="dark"] .navbar.navbar-scrolled { background: transparent !important; }
-[data-bs-theme="dark"] .navbar .container { background: #ffffff !important; border-color: rgba(124,58,237,0.12) !important; }
-[data-bs-theme="dark"] .navbar-collapse { background: #ffffff; border: 1px solid rgba(124,58,237,0.12); }
-[data-bs-theme="dark"] .navbar .nav-link { color: #374151 !important; }
-[data-bs-theme="dark"] .navbar .nav-link:hover { background: #ede9fe !important; color: #7c3aed !important; }
-[data-bs-theme="dark"] .navbar .nav-link.active { color: #7c3aed !important; }
+[data-bs-theme="dark"] .navbar .container { background: rgba(22, 12, 38, 0.92) !important; border-color: rgba(255, 255, 255, 0.15) !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+[data-bs-theme="dark"] .navbar-collapse { background: rgba(22, 12, 38, 0.95) !important; border: 1px solid rgba(255, 255, 255, 0.15) !important; }
+[data-bs-theme="dark"] .navbar .nav-link { color: rgba(255, 255, 255, 0.85) !important; }
+[data-bs-theme="dark"] .navbar .nav-link:hover { background: rgba(124, 58, 237, 0.25) !important; color: #ffffff !important; }
+[data-bs-theme="dark"] .navbar .nav-link.active { color: #c4b5fd !important; font-weight: 600; }
+[data-bs-theme="dark"] .navbar-brand { color: #c4b5fd !important; }
 [data-bs-theme="dark"] .feature-card,
 [data-bs-theme="dark"] .product-card,
 [data-bs-theme="dark"] .blog-card,
@@ -1065,8 +1066,6 @@ footer .form-control:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f59e0b' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 [data-bs-theme="dark"] .btn-scroll-top { box-shadow: 0 4px 15px rgba(124,58,237,0.3); }
-[data-bs-theme="dark"] .navbar .nav-link, [data-bs-theme="dark"] .navbar .navbar-brand { color: rgba(255,255,255,0.85) !important; }
-[data-bs-theme="dark"] .navbar .nav-link.active { color: #ffffff !important; }
 [data-bs-theme="dark"] .glass-panel.text-dark, [data-bs-theme="dark"] .glass-panel .text-dark { color: #ffffff !important; }
 [data-bs-theme="dark"] .bg-white.text-dark, [data-bs-theme="dark"] .bg-white .text-dark { color: #ffffff !important; }
 [data-bs-theme="dark"] .pricing-card, [data-bs-theme="dark"] .pricing-card { background: rgba(22,12,38,0.85) !important; border: 1px solid rgba(255,255,255,0.08) !important; }
